@@ -6,14 +6,8 @@ using Toybox.Graphics as Gfx;
 
 module Rez {
     module Drawables {
-        (:initialized) var LauncherIcon as Symbol;
+        (:initialized) var LauncherIcon as ResourceId;
     } // Drawables
-
-    module Fonts {
-    } // Fonts
-
-    module JsonData {
-    } // JsonData
 
     module Layouts {
         function SimpleLayout(dc as Graphics.Dc) as Array<WatchUi.Drawable> {
@@ -21,13 +15,13 @@ module Rez {
 
             var rez_cmp_local_var_dc_getWidth = dc.getWidth();
 
-            var rez_cmp_local_custom_drawable_19173800786673054537 = new Background();
+            var rez_cmp_local_custom_drawable_11939594661139614796 = new Background();
 
             var rez_cmp_local_text_value_eta = new WatchUi.Text({:identifier=>"value_eta", :color=>Graphics.COLOR_LT_GRAY, :locX=>(rez_cmp_local_var_dc_getWidth * 0.5), :locY=>(rez_cmp_local_var_dc_getHeight * (30 / 100.0)), :justification=>Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER, :font=>Graphics.FONT_SYSTEM_LARGE});
 
             var rez_cmp_local_text_value_pace = new WatchUi.Text({:identifier=>"value_pace", :color=>Graphics.COLOR_LT_GRAY, :locX=>(rez_cmp_local_var_dc_getWidth * 0.5), :locY=>(rez_cmp_local_var_dc_getHeight * (70 / 100.0)), :justification=>Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER, :font=>Graphics.FONT_SYSTEM_TINY});
 
-            return [rez_cmp_local_custom_drawable_19173800786673054537, rez_cmp_local_text_value_eta, rez_cmp_local_text_value_pace] as Array<WatchUi.Drawable>;
+            return [rez_cmp_local_custom_drawable_11939594661139614796, rez_cmp_local_text_value_eta, rez_cmp_local_text_value_pace] as Array<WatchUi.Drawable>;
         }
 
         function FullScreenLayout(dc as Graphics.Dc) as Array<WatchUi.Drawable> {
@@ -35,7 +29,7 @@ module Rez {
 
             var rez_cmp_local_var_dc_getWidth = dc.getWidth();
 
-            var rez_cmp_local_custom_drawable_17358269871256874227 = new Background();
+            var rez_cmp_local_custom_drawable_83741574912206153191 = new Background();
 
             var rez_cmp_local_text_value_eta = new WatchUi.Text({:identifier=>"value_eta", :color=>Graphics.COLOR_LT_GRAY, :locX=>(rez_cmp_local_var_dc_getWidth * (50 / 100.0)), :locY=>(rez_cmp_local_var_dc_getHeight * (4 / 100.0)), :text=>"----", :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Graphics.FONT_SYSTEM_NUMBER_HOT});
 
@@ -49,7 +43,7 @@ module Rez {
 
             var rez_cmp_local_text_label_recent = new WatchUi.Text({:identifier=>"label_recent", :color=>Graphics.COLOR_LT_GRAY, :locX=>(rez_cmp_local_var_dc_getWidth * (50 / 100.0)), :locY=>(rez_cmp_local_var_dc_getHeight * (47 / 100.0)), :text=>"LAST HOUR INFO", :justification=>Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER, :font=>Graphics.FONT_SYSTEM_XTINY});
 
-            return [rez_cmp_local_custom_drawable_17358269871256874227, rez_cmp_local_text_value_eta, rez_cmp_local_text_value_pace_grade, rez_cmp_local_text_value_remaining_info, rez_cmp_local_text_value_max_window_info, rez_cmp_local_text_label_remaining, rez_cmp_local_text_label_recent] as Array<WatchUi.Drawable>;
+            return [rez_cmp_local_custom_drawable_83741574912206153191, rez_cmp_local_text_value_eta, rez_cmp_local_text_value_pace_grade, rez_cmp_local_text_value_remaining_info, rez_cmp_local_text_value_max_window_info, rez_cmp_local_text_label_remaining, rez_cmp_local_text_label_recent] as Array<WatchUi.Drawable>;
         }
 
         function WideLayout(dc as Graphics.Dc) as Array<WatchUi.Drawable> {
@@ -57,7 +51,7 @@ module Rez {
 
             var rez_cmp_local_var_dc_getWidth = dc.getWidth();
 
-            var rez_cmp_local_custom_drawable_92436838972566441529 = new Background();
+            var rez_cmp_local_custom_drawable_11824933295158922413 = new Background();
 
             var rez_cmp_local_text_value_eta = new WatchUi.Text({:identifier=>"value_eta", :color=>Graphics.COLOR_LT_GRAY, :locX=>(rez_cmp_local_var_dc_getWidth * (5 / 100.0)), :locY=>(rez_cmp_local_var_dc_getHeight * (28 / 100.0)), :text=>"ETA", :justification=>Graphics.TEXT_JUSTIFY_LEFT|Graphics.TEXT_JUSTIFY_VCENTER, :font=>Graphics.FONT_SYSTEM_MEDIUM});
 
@@ -65,7 +59,7 @@ module Rez {
 
             var rez_cmp_local_text_value_remaining_info = new WatchUi.Text({:identifier=>"value_remaining_info", :color=>Graphics.COLOR_LT_GRAY, :locX=>(rez_cmp_local_var_dc_getWidth * (50 / 100.0)), :locY=>(rez_cmp_local_var_dc_getHeight * (68 / 100.0)), :text=>"Info Remaining Path", :justification=>Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER, :font=>Graphics.FONT_SYSTEM_TINY});
 
-            return [rez_cmp_local_custom_drawable_92436838972566441529, rez_cmp_local_text_value_eta, rez_cmp_local_text_value_pace, rez_cmp_local_text_value_remaining_info] as Array<WatchUi.Drawable>;
+            return [rez_cmp_local_custom_drawable_11824933295158922413, rez_cmp_local_text_value_eta, rez_cmp_local_text_value_pace, rez_cmp_local_text_value_remaining_info] as Array<WatchUi.Drawable>;
         }
 
         function QuarterLowLeftLayout(dc as Graphics.Dc) as Array<WatchUi.Drawable> {
@@ -73,7 +67,7 @@ module Rez {
 
             var rez_cmp_local_var_dc_getWidth = dc.getWidth();
 
-            var rez_cmp_local_custom_drawable_24236649318936979842 = new Background();
+            var rez_cmp_local_custom_drawable_16380678501279751870 = new Background();
 
             var rez_cmp_local_text_value_eta = new WatchUi.Text({:identifier=>"value_eta", :color=>Graphics.COLOR_LT_GRAY, :locX=>(rez_cmp_local_var_dc_getWidth * (95 / 100.0)), :locY=>(rez_cmp_local_var_dc_getHeight * (20 / 100.0)), :text=>"ETA", :justification=>Graphics.TEXT_JUSTIFY_RIGHT|Graphics.TEXT_JUSTIFY_VCENTER, :font=>Graphics.FONT_SYSTEM_NUMBER_MEDIUM});
 
@@ -83,7 +77,7 @@ module Rez {
 
             var rez_cmp_local_text_value_ete = new WatchUi.Text({:identifier=>"value_ete", :color=>Graphics.COLOR_LT_GRAY, :locX=>(rez_cmp_local_var_dc_getWidth * (95 / 100.0)), :locY=>(rez_cmp_local_var_dc_getHeight * (60 / 100.0)), :justification=>Graphics.TEXT_JUSTIFY_RIGHT|Graphics.TEXT_JUSTIFY_VCENTER, :font=>Graphics.FONT_SYSTEM_TINY});
 
-            return [rez_cmp_local_custom_drawable_24236649318936979842, rez_cmp_local_text_value_eta, rez_cmp_local_text_value_pace, rez_cmp_local_text_value_dist_remaining, rez_cmp_local_text_value_ete] as Array<WatchUi.Drawable>;
+            return [rez_cmp_local_custom_drawable_16380678501279751870, rez_cmp_local_text_value_eta, rez_cmp_local_text_value_pace, rez_cmp_local_text_value_dist_remaining, rez_cmp_local_text_value_ete] as Array<WatchUi.Drawable>;
         }
 
         function QuarterLowRightLayout(dc as Graphics.Dc) as Array<WatchUi.Drawable> {
@@ -91,7 +85,7 @@ module Rez {
 
             var rez_cmp_local_var_dc_getWidth = dc.getWidth();
 
-            var rez_cmp_local_custom_drawable_94639459915053066019 = new Background();
+            var rez_cmp_local_custom_drawable_16187860511068497434 = new Background();
 
             var rez_cmp_local_text_value_eta = new WatchUi.Text({:identifier=>"value_eta", :color=>Graphics.COLOR_LT_GRAY, :locX=>(rez_cmp_local_var_dc_getWidth * (5 / 100.0)), :locY=>(rez_cmp_local_var_dc_getHeight * (20 / 100.0)), :text=>"ETA", :justification=>Graphics.TEXT_JUSTIFY_LEFT|Graphics.TEXT_JUSTIFY_VCENTER, :font=>Graphics.FONT_SYSTEM_NUMBER_MEDIUM});
 
@@ -101,7 +95,7 @@ module Rez {
 
             var rez_cmp_local_text_value_ete = new WatchUi.Text({:identifier=>"value_ete", :color=>Graphics.COLOR_LT_GRAY, :locX=>(rez_cmp_local_var_dc_getWidth * (5 / 100.0)), :locY=>(rez_cmp_local_var_dc_getHeight * (60 / 100.0)), :justification=>Graphics.TEXT_JUSTIFY_LEFT|Graphics.TEXT_JUSTIFY_VCENTER, :font=>Graphics.FONT_SYSTEM_TINY});
 
-            return [rez_cmp_local_custom_drawable_94639459915053066019, rez_cmp_local_text_value_eta, rez_cmp_local_text_value_pace, rez_cmp_local_text_value_dist_remaining, rez_cmp_local_text_value_ete] as Array<WatchUi.Drawable>;
+            return [rez_cmp_local_custom_drawable_16187860511068497434, rez_cmp_local_text_value_eta, rez_cmp_local_text_value_pace, rez_cmp_local_text_value_dist_remaining, rez_cmp_local_text_value_ete] as Array<WatchUi.Drawable>;
         }
 
         function QuarterUpperLayout(dc as Graphics.Dc) as Array<WatchUi.Drawable> {
@@ -109,13 +103,13 @@ module Rez {
 
             var rez_cmp_local_var_dc_getWidth = dc.getWidth();
 
-            var rez_cmp_local_custom_drawable_13434501861382718619 = new Background();
+            var rez_cmp_local_custom_drawable_10168405121147896915 = new Background();
 
             var rez_cmp_local_text_value_eta = new WatchUi.Text({:identifier=>"value_eta", :color=>Graphics.COLOR_LT_GRAY, :locX=>(rez_cmp_local_var_dc_getWidth * (50 / 100.0)), :locY=>(rez_cmp_local_var_dc_getHeight * (60 / 100.0)), :text=>"ETA", :justification=>Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER, :font=>Graphics.FONT_SYSTEM_NUMBER_MILD});
 
             var rez_cmp_local_text_value_pace = new WatchUi.Text({:identifier=>"value_pace", :color=>Graphics.COLOR_LT_GRAY, :locX=>(rez_cmp_local_var_dc_getWidth * (50 / 100.0)), :locY=>(rez_cmp_local_var_dc_getHeight * (85 / 100.0)), :text=>"Pace", :justification=>Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER, :font=>Graphics.FONT_SYSTEM_TINY});
 
-            return [rez_cmp_local_custom_drawable_13434501861382718619, rez_cmp_local_text_value_eta, rez_cmp_local_text_value_pace] as Array<WatchUi.Drawable>;
+            return [rez_cmp_local_custom_drawable_10168405121147896915, rez_cmp_local_text_value_eta, rez_cmp_local_text_value_pace] as Array<WatchUi.Drawable>;
         }
 
         function DomeTopNarrow(dc as Graphics.Dc) as Array<WatchUi.Drawable> {
@@ -123,13 +117,13 @@ module Rez {
 
             var rez_cmp_local_var_dc_getWidth = dc.getWidth();
 
-            var rez_cmp_local_custom_drawable_12843936670286370172 = new Background();
+            var rez_cmp_local_custom_drawable_20926247044642821191 = new Background();
 
             var rez_cmp_local_text_value_eta = new WatchUi.Text({:identifier=>"value_eta", :color=>Graphics.COLOR_LT_GRAY, :locX=>(rez_cmp_local_var_dc_getWidth * (50 / 100.0)), :locY=>(rez_cmp_local_var_dc_getHeight * (30 / 100.0)), :justification=>Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER, :font=>Graphics.FONT_SYSTEM_MEDIUM});
 
             var rez_cmp_local_text_value_pace = new WatchUi.Text({:identifier=>"value_pace", :color=>Graphics.COLOR_LT_GRAY, :locX=>(rez_cmp_local_var_dc_getWidth * (50 / 100.0)), :locY=>(rez_cmp_local_var_dc_getHeight * (70 / 100.0)), :justification=>Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER, :font=>Graphics.FONT_SYSTEM_TINY});
 
-            return [rez_cmp_local_custom_drawable_12843936670286370172, rez_cmp_local_text_value_eta, rez_cmp_local_text_value_pace] as Array<WatchUi.Drawable>;
+            return [rez_cmp_local_custom_drawable_20926247044642821191, rez_cmp_local_text_value_eta, rez_cmp_local_text_value_pace] as Array<WatchUi.Drawable>;
         }
 
         function DomeBottomNarrow(dc as Graphics.Dc) as Array<WatchUi.Drawable> {
@@ -137,13 +131,13 @@ module Rez {
 
             var rez_cmp_local_var_dc_getWidth = dc.getWidth();
 
-            var rez_cmp_local_custom_drawable_23237263413171160331 = new Background();
+            var rez_cmp_local_custom_drawable_81627633920420617501 = new Background();
 
             var rez_cmp_local_text_value_eta = new WatchUi.Text({:identifier=>"value_eta", :color=>Graphics.COLOR_LT_GRAY, :locX=>(rez_cmp_local_var_dc_getWidth * (50 / 100.0)), :locY=>(rez_cmp_local_var_dc_getHeight * (70 / 100.0)), :justification=>Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER, :font=>Graphics.FONT_SYSTEM_MEDIUM});
 
             var rez_cmp_local_text_value_pace = new WatchUi.Text({:identifier=>"value_pace", :color=>Graphics.COLOR_LT_GRAY, :locX=>(rez_cmp_local_var_dc_getWidth * (50 / 100.0)), :locY=>(rez_cmp_local_var_dc_getHeight * (30 / 100.0)), :justification=>Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER, :font=>Graphics.FONT_SYSTEM_TINY});
 
-            return [rez_cmp_local_custom_drawable_23237263413171160331, rez_cmp_local_text_value_eta, rez_cmp_local_text_value_pace] as Array<WatchUi.Drawable>;
+            return [rez_cmp_local_custom_drawable_81627633920420617501, rez_cmp_local_text_value_eta, rez_cmp_local_text_value_pace] as Array<WatchUi.Drawable>;
         }
 
         function DomeTopLayout(dc as Graphics.Dc) as Array<WatchUi.Drawable> {
@@ -151,7 +145,7 @@ module Rez {
 
             var rez_cmp_local_var_dc_getWidth = dc.getWidth();
 
-            var rez_cmp_local_custom_drawable_12794444894479182729 = new Background();
+            var rez_cmp_local_custom_drawable_21345573071785100857 = new Background();
 
             var rez_cmp_local_text_value_eta = new WatchUi.Text({:identifier=>"value_eta", :color=>Graphics.COLOR_LT_GRAY, :locX=>(rez_cmp_local_var_dc_getWidth * (50 / 100.0)), :locY=>(rez_cmp_local_var_dc_getHeight * (30 / 100.0)), :text=>"---", :justification=>Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER, :font=>Graphics.FONT_SYSTEM_NUMBER_MEDIUM});
 
@@ -159,7 +153,7 @@ module Rez {
 
             var rez_cmp_local_text_value_pace_grade = new WatchUi.Text({:identifier=>"value_pace_grade", :color=>Graphics.COLOR_LT_GRAY, :locX=>(rez_cmp_local_var_dc_getWidth * (50 / 100.0)), :locY=>(rez_cmp_local_var_dc_getHeight * (65 / 100.0)), :text=>"CURRENT PACE", :justification=>Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER, :font=>Graphics.FONT_SYSTEM_TINY});
 
-            return [rez_cmp_local_custom_drawable_12794444894479182729, rez_cmp_local_text_value_eta, rez_cmp_local_text_value_remaining_info, rez_cmp_local_text_value_pace_grade] as Array<WatchUi.Drawable>;
+            return [rez_cmp_local_custom_drawable_21345573071785100857, rez_cmp_local_text_value_eta, rez_cmp_local_text_value_remaining_info, rez_cmp_local_text_value_pace_grade] as Array<WatchUi.Drawable>;
         }
 
         function TopHalfLayout(dc as Graphics.Dc) as Array<WatchUi.Drawable> {
@@ -167,7 +161,7 @@ module Rez {
 
             var rez_cmp_local_var_dc_getWidth = dc.getWidth();
 
-            var rez_cmp_local_custom_drawable_32730192014316552181 = new Background();
+            var rez_cmp_local_custom_drawable_38714166212877975246 = new Background();
 
             var rez_cmp_local_text_value_eta = new WatchUi.Text({:identifier=>"value_eta", :color=>Graphics.COLOR_LT_GRAY, :locX=>(rez_cmp_local_var_dc_getWidth * (50 / 100.0)), :locY=>(rez_cmp_local_var_dc_getHeight * (35 / 100.0)), :text=>"--:--", :justification=>Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER, :font=>Graphics.FONT_SYSTEM_NUMBER_MEDIUM});
 
@@ -177,7 +171,7 @@ module Rez {
 
             var rez_cmp_local_text_value_remaining_info = new WatchUi.Text({:identifier=>"value_remaining_info", :color=>Graphics.COLOR_LT_GRAY, :locX=>(rez_cmp_local_var_dc_getWidth * (50 / 100.0)), :locY=>(rez_cmp_local_var_dc_getHeight * (75 / 100.0)), :text=>"Info Remaining Path", :justification=>Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER, :font=>Graphics.FONT_SYSTEM_TINY});
 
-            return [rez_cmp_local_custom_drawable_32730192014316552181, rez_cmp_local_text_value_eta, rez_cmp_local_text_value_pace_grade, rez_cmp_local_text_value_pace_1h, rez_cmp_local_text_value_remaining_info] as Array<WatchUi.Drawable>;
+            return [rez_cmp_local_custom_drawable_38714166212877975246, rez_cmp_local_text_value_eta, rez_cmp_local_text_value_pace_grade, rez_cmp_local_text_value_pace_1h, rez_cmp_local_text_value_remaining_info] as Array<WatchUi.Drawable>;
         }
 
         function BottomHalfLayout(dc as Graphics.Dc) as Array<WatchUi.Drawable> {
@@ -185,7 +179,7 @@ module Rez {
 
             var rez_cmp_local_var_dc_getWidth = dc.getWidth();
 
-            var rez_cmp_local_custom_drawable_13458916482624980761 = new Background();
+            var rez_cmp_local_custom_drawable_37776306214937356971 = new Background();
 
             var rez_cmp_local_text_value_eta = new WatchUi.Text({:identifier=>"value_eta", :color=>Graphics.COLOR_LT_GRAY, :locX=>(rez_cmp_local_var_dc_getWidth * (50 / 100.0)), :locY=>(rez_cmp_local_var_dc_getHeight * (25 / 100.0)), :text=>"--:--", :justification=>Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER, :font=>Graphics.FONT_SYSTEM_NUMBER_MEDIUM});
 
@@ -193,15 +187,12 @@ module Rez {
 
             var rez_cmp_local_text_value_remaining_info = new WatchUi.Text({:identifier=>"value_remaining_info", :color=>Graphics.COLOR_LT_GRAY, :locX=>(rez_cmp_local_var_dc_getWidth * (50 / 100.0)), :locY=>(rez_cmp_local_var_dc_getHeight * (65 / 100.0)), :text=>"Info Remaining Path", :justification=>Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER, :font=>Graphics.FONT_SYSTEM_XTINY});
 
-            return [rez_cmp_local_custom_drawable_13458916482624980761, rez_cmp_local_text_value_eta, rez_cmp_local_text_value_pace_grade, rez_cmp_local_text_value_remaining_info] as Array<WatchUi.Drawable>;
+            return [rez_cmp_local_custom_drawable_37776306214937356971, rez_cmp_local_text_value_eta, rez_cmp_local_text_value_pace_grade, rez_cmp_local_text_value_remaining_info] as Array<WatchUi.Drawable>;
         }
     } // Layouts
 
-    module Menus {
-    } // Menus
-
     module Strings {
-        (:initialized) var AppName as Symbol;
+        (:initialized) var AppName as ResourceId;
     } // Strings
 
     module Styles {
@@ -759,6 +750,7 @@ module Rez {
             const screenWidth as Number = 416;
             const screenShape = Toybox.System.SCREEN_SHAPE_ROUND;
             const hasNightMode as Boolean = false;
+            const hasGpu as Boolean = true;
             const screenHeight as Number = 416;
             const hasTouchScreen as Boolean = true;
             const hasEnhancedReadabilityMode as Boolean = false;

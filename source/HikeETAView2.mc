@@ -265,11 +265,11 @@ class HikeETAView extends WatchUi.DataField
             var __ete = "-";
             if (_timeRemaining != null) { __ete = _timeRemaining.value().format("%d"); }
 
-            Sys.println(currentTime(info).format("%d") + " " + 
-                dist.format("%d") + " " + 
-                _estimatedRobustSpeed.format("%.3f") + " " +
-                _actualWindowSpeed.format("%.3f") + " " +
-                __ete);
+            // Sys.println(currentTime(info).format("%d") + " " + 
+            //     dist.format("%d") + " " + 
+            //     _estimatedRobustSpeed.format("%.3f") + " " +
+            //     _actualWindowSpeed.format("%.3f") + " " +
+            //     __ete);
         }
     }
 
@@ -286,6 +286,10 @@ class HikeETAView extends WatchUi.DataField
         _lastTimeSample = now;
         
         if (_timeSampleInterval < _timeSampleIntervalTarget) { _timeSampleInterval += 0.3; }
+
+        System.println(now.format("%d") + " " + 
+            _elapsedDistance.format("%d") + " " + 
+            info.altitude.format("%.3f"));
 
         return true;
     }

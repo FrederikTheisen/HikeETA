@@ -43,14 +43,11 @@ _Users_frederiktheisen_Projects_XCodeProjects_HikeETA_HikeETA_source_HikeETAApp_
     function onStop(state as Dictionary or Null) as Void {
     }
     //! Return the initial view of your application here
-    [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/HikeETA/HikeETA/source/HikeETAApp.mc"; @line = 32; @symbol_functiondef = [getInitialView,32,13,27]; @symbol_return<0> = [Array,32,33,38]; @symbol_return<1> = [Views,32,39,44]; @symbol_return<2> = [InputDelegates,32,48,62]; ]
-    function getInitialView() as Array<Views or InputDelegates> or Null {
+    [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/HikeETA/HikeETA/source/HikeETAApp.mc"; @line = 32; @symbol_functiondef = [getInitialView,32,13,27]; ]
+    function getInitialView() {
 _Users_frederiktheisen_Projects_XCodeProjects_HikeETA_HikeETA_source_HikeETAApp_mc_33_4_35_4_start:
 [ "/Users/frederiktheisen/Projects/XCodeProjects/HikeETA/HikeETA/source/HikeETAApp.mc" 34 8 ]
-        %tmp.1 = newa 1 Array<Views or InputDelegates>;
-        symbol [ Array %tmp.1 34 40 45 ];
-        symbol [ Views %tmp.1 34 46 51 ];
-        symbol [ InputDelegates %tmp.1 34 55 69 ];
+        %tmp.1 = newa 1;
         symbol [ HikeETAView %tmp.5 34 21 32 ];
         %tmp.5 = getv ? :HikeETAView;
         %tmp.2 = newc %tmp.5 ();
