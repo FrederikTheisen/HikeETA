@@ -1,0 +1,32 @@
+
+<resources>
+    <!-- <properties>
+        <property id="timeSampleInterval" type="float">10</property>
+        <property id="timeAverageWindow" type="float">300</property>
+        <property id="distSampleInterval" type="float">10</property>
+        <property id="expectedAscent" type="float">500</property>
+        <property id="baseSpeed" type="float">30</property>
+    </properties>
+
+    <settings>
+        <setting propertyKey="@Properties.timeSampleInterval" title="Time Sample Interval (s)">
+            <settingConfig type="numeric" min="1" max="3600" />
+        </setting>
+
+        <setting propertyKey="@Properties.timeAverageWindow" title="Time Window Length (s)">
+            <settingConfig type="numeric" min="10" max="3600" />
+        </setting>
+
+        <setting propertyKey="@Properties.distSampleInterval" title="Distance Sample Interval (m)">
+            <settingConfig type="numeric" min="1" max="1000" />
+        </setting>
+
+        <setting propertyKey="@Properties.expectedAscent" title="Expected Total Ascent (m)">
+            <settingConfig type="numeric" min="0" max="10000" />
+        </setting>
+
+        <setting propertyKey="@Properties.baseSpeed" title="Expected pace (min/km)">
+            <settingConfig type="numeric" min="0" max="120" />
+        </setting>
+    </settings> -->
+</resources>

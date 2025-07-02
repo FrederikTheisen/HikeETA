@@ -1,0 +1,88 @@
+<layouts>
+    <!-- Simple Field Layout. -->
+    <layout id="SimpleLayout">
+        <drawable class="Background" />
+        <label id="value_eta" x="center" y="30%" color="Graphics.COLOR_LT_GRAY" justification="Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER" font="Graphics.FONT_SYSTEM_LARGE" />
+        <label id="value_pace" x="center" y="70%" color="Graphics.COLOR_LT_GRAY" justification="Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER" font="Graphics.FONT_SYSTEM_TINY" />
+    </layout>
+
+    <!-- Full screen layout. Build talbe layout: dist, alt, time; rem, sample, recent-->
+    <layout id="FullScreenLayout">
+        <drawable class="Background" />
+        <label id="value_eta" text="----" x="50%" y="4%" color="Graphics.COLOR_LT_GRAY" justification="Graphics.TEXT_JUSTIFY_CENTER" font="Graphics.FONT_SYSTEM_NUMBER_HOT" />
+        <label text="CURRENT PACE" id="value_pace_grade" x="50%" y="37%" color="Graphics.COLOR_LT_GRAY" justification="Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER" font="Graphics.FONT_SYSTEM_SMALL" />
+        <label id="value_remaining_info" text="---" x="50%" y="75%" color="Graphics.COLOR_LT_GRAY" justification="Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER" font="Graphics.FONT_SYSTEM_TINY" />
+        <label id="value_max_window_info" text="---" x="50%" y="55%" color="Graphics.COLOR_LT_GRAY" justification="Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER" font="Graphics.FONT_SYSTEM_TINY" />
+        <label id="label_remaining" text="REMAINING COURSE" x="50%" y="67%" color="Graphics.COLOR_LT_GRAY" justification="Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER" font="Graphics.FONT_SYSTEM_XTINY" />
+        <label id="label_recent" text="LAST HOUR INFO" x="50%" y="47%" color="Graphics.COLOR_LT_GRAY" justification="Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER" font="Graphics.FONT_SYSTEM_XTINY" />
+    </layout>
+
+    <!-- Wide field layout. -->
+    <layout id="WideLayout">
+        <drawable class="Background" />
+        <label id="value_eta" text="ETA" x="5%" y="28%" color="Graphics.COLOR_LT_GRAY" justification="Graphics.TEXT_JUSTIFY_LEFT|Graphics.TEXT_JUSTIFY_VCENTER" font="Graphics.FONT_SYSTEM_MEDIUM" />
+        <label id="value_pace" text="PACE" x="95%" y="28%" color="Graphics.COLOR_LT_GRAY" justification="Graphics.TEXT_JUSTIFY_RIGHT|Graphics.TEXT_JUSTIFY_VCENTER" font="Graphics.FONT_SYSTEM_MEDIUM" />
+        <label text="Info Remaining Path" id="value_remaining_info" x="50%" y="68%" color="Graphics.COLOR_LT_GRAY" justification="Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER" font="Graphics.FONT_SYSTEM_TINY" />
+    </layout>
+
+    <!-- Quarter Field layouts. -->
+    <layout id="QuarterLowLeftLayout">
+        <drawable class="Background" />
+        <label id="value_eta" text="ETA"    x="95%" y="20%" color="Graphics.COLOR_LT_GRAY" justification="Graphics.TEXT_JUSTIFY_RIGHT|Graphics.TEXT_JUSTIFY_VCENTER" font="Graphics.FONT_SYSTEM_NUMBER_MEDIUM" />
+        <label id="value_pace" text="Pace"  x="95%" y="45%" color="Graphics.COLOR_LT_GRAY" justification="Graphics.TEXT_JUSTIFY_RIGHT|Graphics.TEXT_JUSTIFY_VCENTER" font="Graphics.FONT_SYSTEM_TINY" />
+        <label id="value_dist_remaining"    x="95%" y="75%" color="Graphics.COLOR_LT_GRAY" justification="Graphics.TEXT_JUSTIFY_RIGHT|Graphics.TEXT_JUSTIFY_VCENTER" font="Graphics.FONT_SYSTEM_TINY" />
+        <label id="value_ete"   x="95%" y="60%" color="Graphics.COLOR_LT_GRAY" justification="Graphics.TEXT_JUSTIFY_RIGHT|Graphics.TEXT_JUSTIFY_VCENTER" font="Graphics.FONT_SYSTEM_TINY" />
+    </layout>
+
+    <layout id="QuarterLowRightLayout">
+        <drawable class="Background" />
+        <label id="value_eta" text="ETA"    x="5%" y="20%" color="Graphics.COLOR_LT_GRAY" justification="Graphics.TEXT_JUSTIFY_LEFT|Graphics.TEXT_JUSTIFY_VCENTER" font="Graphics.FONT_SYSTEM_NUMBER_MEDIUM" />
+        <label id="value_pace" text="Pace"  x="5%" y="45%" color="Graphics.COLOR_LT_GRAY" justification="Graphics.TEXT_JUSTIFY_LEFT|Graphics.TEXT_JUSTIFY_VCENTER" font="Graphics.FONT_SYSTEM_TINY" />
+        <label id="value_dist_remaining"    x="5%" y="75%" color="Graphics.COLOR_LT_GRAY" justification="Graphics.TEXT_JUSTIFY_LEFT|Graphics.TEXT_JUSTIFY_VCENTER" font="Graphics.FONT_SYSTEM_TINY" />
+        <label id="value_ete"   x="5%" y="60%" color="Graphics.COLOR_LT_GRAY" justification="Graphics.TEXT_JUSTIFY_LEFT|Graphics.TEXT_JUSTIFY_VCENTER" font="Graphics.FONT_SYSTEM_TINY" />
+    </layout>
+
+    <layout id="QuarterUpperLayout">
+        <drawable class="Background" />
+        <label id="value_eta" text="ETA"    x="50%" y="60%" color="Graphics.COLOR_LT_GRAY" justification="Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER" font="Graphics.FONT_SYSTEM_NUMBER_MILD" />
+        <label id="value_pace" text="Pace"  x="50%" y="85%" color="Graphics.COLOR_LT_GRAY" justification="Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER" font="Graphics.FONT_SYSTEM_TINY" />
+    </layout>
+
+    <!-- Narrow dome layouts. -->
+    <layout id="DomeTopNarrow">
+        <drawable class="Background" />
+        <label id="value_eta" x="50%" y="30%" color="Graphics.COLOR_LT_GRAY" justification="Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER" font="Graphics.FONT_SYSTEM_MEDIUM" />
+        <label id="value_pace" x="50%" y="70%" color="Graphics.COLOR_LT_GRAY" justification="Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER" font="Graphics.FONT_SYSTEM_TINY" />
+    </layout>
+
+    <layout id="DomeBottomNarrow">
+        <drawable class="Background" />
+        <label id="value_eta" x="50%" y="70%" color="Graphics.COLOR_LT_GRAY" justification="Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER" font="Graphics.FONT_SYSTEM_MEDIUM" />
+        <label id="value_pace" x="50%" y="30%" color="Graphics.COLOR_LT_GRAY" justification="Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER" font="Graphics.FONT_SYSTEM_TINY" />
+    </layout>
+
+    <!-- Top dome layout -->
+    <layout id="DomeTopLayout">
+        <drawable class="Background" />
+        <label text="---" id="value_eta" x="50%" y="30%" color="Graphics.COLOR_LT_GRAY" justification="Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER" font="Graphics.FONT_SYSTEM_NUMBER_MEDIUM" />
+        <label text="REMAINING COURSE" id="value_remaining_info" x="50%" y="85%" color="Graphics.COLOR_LT_GRAY" justification="Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER" font="Graphics.FONT_SYSTEM_XTINY" />
+        <label text="CURRENT PACE" id="value_pace_grade" x="50%" y="65%" color="Graphics.COLOR_LT_GRAY" justification="Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER" font="Graphics.FONT_SYSTEM_TINY" />
+    </layout>
+
+    <!-- Top half layout -->
+    <layout id="TopHalfLayout">
+        <drawable class="Background" />
+        <label text="--:--" id="value_eta" x="50%" y="35%" color="Graphics.COLOR_LT_GRAY" justification="Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER" font="Graphics.FONT_SYSTEM_NUMBER_MEDIUM" />
+        <label text="CURRENT PACE" id="value_pace_grade" x="50%" y="60%" color="Graphics.COLOR_LT_GRAY" justification="Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER" font="Graphics.FONT_SYSTEM_TINY" />
+        <label text="Pace(1H)" id="value_pace_1h" x="50%" y="90%" color="Graphics.COLOR_LT_GRAY" justification="Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER" font="Graphics.FONT_SYSTEM_XTINY" />
+        <label text="Info Remaining Path" id="value_remaining_info" x="50%" y="75%" color="Graphics.COLOR_LT_GRAY" justification="Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER" font="Graphics.FONT_SYSTEM_TINY" />
+    </layout>
+
+    <!-- Bottom half layout -->
+    <layout id="BottomHalfLayout">
+        <drawable class="Background" />
+        <label text="--:--" id="value_eta" x="50%" y="25%" color="Graphics.COLOR_LT_GRAY" justification="Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER" font="Graphics.FONT_SYSTEM_NUMBER_MEDIUM" />
+        <label text="CURRENT PACE" id="value_pace_grade" x="50%" y="50%" color="Graphics.COLOR_LT_GRAY" justification="Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER" font="Graphics.FONT_SYSTEM_TINY" />
+        <label text="Info Remaining Path" id="value_remaining_info" x="50%" y="65%" color="Graphics.COLOR_LT_GRAY" justification="Graphics.TEXT_JUSTIFY_CENTER|Graphics.TEXT_JUSTIFY_VCENTER" font="Graphics.FONT_SYSTEM_XTINY" />
+    </layout>
+</layouts>

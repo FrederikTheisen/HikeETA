@@ -1,0 +1,79 @@
+[ @file = "/Users/frederiktheisen/Projects/XCodeProjects/HikeETA/HikeETA/source/HikeETAApp.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Application,1,14,25]; ]
+import Toybox.Application;
+[ @file = "/Users/frederiktheisen/Projects/XCodeProjects/HikeETA/HikeETA/source/HikeETAApp.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [Application,2,14,25]; @symbol_importdef<2> = [Properties,2,26,36]; ]
+import Toybox.Application.Properties;
+[ @file = "/Users/frederiktheisen/Projects/XCodeProjects/HikeETA/HikeETA/source/HikeETAApp.mc"; @line = 3; @symbol_importdef<0> = [Toybox,3,7,13]; @symbol_importdef<1> = [Lang,3,14,18]; ]
+import Toybox.Lang;
+[ @file = "/Users/frederiktheisen/Projects/XCodeProjects/HikeETA/HikeETA/source/HikeETAApp.mc"; @line = 4; @symbol_importdef<0> = [Toybox,4,7,13]; @symbol_importdef<1> = [WatchUi,4,14,21]; ]
+import Toybox.WatchUi;
+[ @file = "/Users/frederiktheisen/Projects/XCodeProjects/HikeETA/HikeETA/source/HikeETAApp.mc"; @line = 6; @symbol_usingdef<0> = [Toybox,6,6,12]; @symbol_usingdef<1> = [Activity,6,13,21]; @symbol_usingAlias = [Activity,6,25,33]; ]
+using Toybox.Activity as :Activity;
+[ @file = "/Users/frederiktheisen/Projects/XCodeProjects/HikeETA/HikeETA/source/HikeETAApp.mc"; @line = 7; @symbol_usingdef<0> = [Toybox,7,6,12]; @symbol_usingdef<1> = [Position,7,13,21]; @symbol_usingAlias = [Pos,7,25,28]; ]
+using Toybox.Position as :Pos;
+[ @file = "/Users/frederiktheisen/Projects/XCodeProjects/HikeETA/HikeETA/source/HikeETAApp.mc"; @line = 8; @symbol_usingdef<0> = [Toybox,8,6,12]; @symbol_usingdef<1> = [Time,8,13,17]; @symbol_usingAlias = [Time,8,21,25]; ]
+using Toybox.Time as :Time;
+[ @file = "/Users/frederiktheisen/Projects/XCodeProjects/HikeETA/HikeETA/source/HikeETAApp.mc"; @line = 9; @symbol_usingdef<0> = [Toybox,9,6,12]; @symbol_usingdef<1> = [System,9,13,19]; @symbol_usingAlias = [Sys,9,23,26]; ]
+using Toybox.System as :Sys;
+[ @file = "/Users/frederiktheisen/Projects/XCodeProjects/HikeETA/HikeETA/source/HikeETAApp.mc"; @line = 10; @symbol_usingdef<0> = [Toybox,10,6,12]; @symbol_usingdef<1> = [Math,10,13,17]; @symbol_usingAlias = [Math,10,21,25]; ]
+using Toybox.Math as :Math;
+[ @file = "/Users/frederiktheisen/Projects/XCodeProjects/HikeETA/HikeETA/source/HikeETAApp.mc"; @line = 13; @symbol_classdef = [HikeETAApp,13,6,16]; @symbol_extends<0> = [Application,13,25,36]; @symbol_extends<1> = [AppBase,13,37,44]; ]
+class HikeETAApp extends Application.AppBase {
+    [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/HikeETA/HikeETA/source/HikeETAApp.mc"; @line = 13; ]
+    <init> {
+    }
+    [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/HikeETA/HikeETA/source/HikeETAApp.mc"; @line = 13; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/HikeETA/HikeETA/source/HikeETAApp.mc"; @line = 15; @symbol_functiondef = [initialize,15,13,23]; ]
+    function initialize() as Void {
+_Users_frederiktheisen_Projects_XCodeProjects_HikeETA_HikeETA_source_HikeETAApp_mc_16_4_18_4_start:
+[ "/Users/frederiktheisen/Projects/XCodeProjects/HikeETA/HikeETA/source/HikeETAApp.mc" 17 8 ]
+        symbol [ AppBase %tmp.2 17 8 15 ];
+        %tmp.2 = getv ? :AppBase;
+        symbol [ initialize %tmp.3 17 16 26 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+_Users_frederiktheisen_Projects_XCodeProjects_HikeETA_HikeETA_source_HikeETAApp_mc_16_4_18_4_stop:
+    }
+    [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/HikeETA/HikeETA/source/HikeETAApp.mc"; @line = 21; @symbol_functiondef = [onStart,21,13,20]; @symbol_param<0> = [state,21,21,26]; @symbol_param<0>_type<0> = [Dictionary,21,30,40]; ]
+    function onStart(state as Dictionary or Null) as Void {
+    }
+    [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/HikeETA/HikeETA/source/HikeETAApp.mc"; @line = 27; @symbol_functiondef = [onStop,27,13,19]; @symbol_param<0> = [state,27,20,25]; @symbol_param<0>_type<0> = [Dictionary,27,29,39]; ]
+    function onStop(state as Dictionary or Null) as Void {
+    }
+    //! Return the initial view of your application here
+    [ @file = "/Users/frederiktheisen/Projects/XCodeProjects/HikeETA/HikeETA/source/HikeETAApp.mc"; @line = 32; @symbol_functiondef = [getInitialView,32,13,27]; @symbol_return<0> = [Array,32,33,38]; @symbol_return<1> = [Views,32,39,44]; @symbol_return<2> = [InputDelegates,32,48,62]; ]
+    function getInitialView() as Array<Views or InputDelegates> or Null {
+_Users_frederiktheisen_Projects_XCodeProjects_HikeETA_HikeETA_source_HikeETAApp_mc_33_4_35_4_start:
+[ "/Users/frederiktheisen/Projects/XCodeProjects/HikeETA/HikeETA/source/HikeETAApp.mc" 34 8 ]
+        %tmp.1 = newa 1 Array<Views or InputDelegates>;
+        symbol [ Array %tmp.1 34 40 45 ];
+        symbol [ Views %tmp.1 34 46 51 ];
+        symbol [ InputDelegates %tmp.1 34 55 69 ];
+        symbol [ HikeETAView %tmp.5 34 21 32 ];
+        %tmp.5 = getv ? :HikeETAView;
+        %tmp.2 = newc %tmp.5 ();
+        %tmp.6 = dup %tmp.1;
+        %tmp.7 = aputv %tmp.6 0 %tmp.2;
+        ret %tmp.7;
+_Users_frederiktheisen_Projects_XCodeProjects_HikeETA_HikeETA_source_HikeETAApp_mc_33_4_35_4_stop:
+    }
+}
+[ @file = "/Users/frederiktheisen/Projects/XCodeProjects/HikeETA/HikeETA/source/HikeETAApp.mc"; @line = 38; @symbol_functiondef = [getApp,38,9,15]; @symbol_return<0> = [HikeETAApp,38,21,31]; ]
+function getApp() as HikeETAApp {
+_Users_frederiktheisen_Projects_XCodeProjects_HikeETA_HikeETA_source_HikeETAApp_mc_39_0_41_0_start:
+[ "/Users/frederiktheisen/Projects/XCodeProjects/HikeETA/HikeETA/source/HikeETAApp.mc" 40 4 ]
+    symbol [ Application %tmp.1 40 11 22 ];
+    %tmp.1 = getm $.Toybox.Application;
+    symbol [ getApp %tmp.2 40 23 29 ];
+    %tmp.2 = getv function %tmp.1 :getApp;
+    %tmp.3 = invoke %tmp.1 %tmp.2();
+    %tmp.4 = as %tmp.3 HikeETAApp;
+    symbol [ HikeETAApp %tmp.4 40 35 45 ];
+    ret %tmp.4;
+_Users_frederiktheisen_Projects_XCodeProjects_HikeETA_HikeETA_source_HikeETAApp_mc_39_0_41_0_stop:
+}
+[ @file = "/Users/frederiktheisen/Projects/XCodeProjects/HikeETA/HikeETA/source/HikeETAApp.mc"; @line = 1; ]
+<init> {
+}
