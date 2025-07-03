@@ -5,3 +5,6 @@ bin/internal-mir/Rez.mir
 bin/mir/source/HikeETAView2.mir
 bin/mir/source/HikeETAApp.mir
 HikeETA.iq
+bin/HikeETA.prg
+bin/HikeETA.prg.debug.xml
+bin/internal-mir/Rez.mir
