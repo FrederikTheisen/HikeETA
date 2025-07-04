@@ -29,7 +29,6 @@ class HikeETAView extends WatchUi.DataField
     var _timeSamples as Array<Dictionary>;
     var _oldestSampleIdx as Number = 0;
     var _timeCount as Number = 0;
-
     var _lastTimeSample as Float = 0.0;
 
     // Speed samples
@@ -40,16 +39,11 @@ class HikeETAView extends WatchUi.DataField
     var _distanceToDestination as Float or Null = null;
     var _offCourse as Boolean = true;
     var _remainingDistance as Float = -1.0;
-
-    //var _currentAltitude as Float or Null = null;
-    //var _destinationAltitude as Float or Null = null;
-
     var _elapsedDistance as Float = 0.0;
 
     // Calculated speeds
     var _estimatedRobustSpeed as Float = 0.0;
     var _actualWindowSpeed as Float = BASE_FLAT_SPEED;
-
     var _hasEwmaSpeed as Boolean = false;
     var _hasWindowSpeed as Boolean = false;
 
@@ -112,20 +106,20 @@ class HikeETAView extends WatchUi.DataField
 
     function getCurrentGrade() as Float {
         if (_mostRecentSpeedSample == null) { return 0.0; }
-
+        if (_mostRecentSpeedSample["grade"] == null) { return 0.0; }
         return _mostRecentSpeedSample["grade"];
     }
 
     function getRemainingGrade(info as Activity.Info) as Float {
-        if (info has :elevationAtDestination && info.elevationAtDestination != null) {
-            var dElev = info.elevationAtDestination - info.altitude;
-            var dDist = info.distanceToDestination;
+        if (info == null) { return 0.0; }
+        if (info.elevationAtDestination == null) { return 0.0; }
+        if (info.altitude == null) { return 0.0; }
+        if (info.distanceToDestination == null) { return 0.0; }
 
-            if (dElev != null || dDist != null)
-            {
-                if (dDist >= 4) { return (dElev / dDist) as Float; } 
-            }
-        }
+        var dElev = info.elevationAtDestination - info.altitude;
+        var dDist = info.distanceToDestination;
+
+        if (dDist != null && dDist >= 4) { return (dElev / dDist) as Float; }
         return 0.0;
     }
 
@@ -241,10 +235,6 @@ class HikeETAView extends WatchUi.DataField
         
         updateDistancesInfo(info);
 
-        // Store current/destination altitude and distance remaining
-        //if (info.altitude != null) { _currentAltitude = info.altitude as Float; }
-        //if (info.elevationAtDestination != null) { _destinationAltitude = info.elevationAtDestination as Float; }
-
         if (dist == null) { return; }
 
         if (updateSampleData(info))
@@ -264,12 +254,6 @@ class HikeETAView extends WatchUi.DataField
 
             var __ete = "-";
             if (_timeRemaining != null) { __ete = _timeRemaining.value().format("%d"); }
-
-            // Sys.println(currentTime(info).format("%d") + " " + 
-            //     dist.format("%d") + " " + 
-            //     _estimatedRobustSpeed.format("%.3f") + " " +
-            //     _actualWindowSpeed.format("%.3f") + " " +
-            //     __ete);
         }
     }
 
@@ -303,6 +287,9 @@ class HikeETAView extends WatchUi.DataField
             var prevSample = _timeSamples[prevIdx];
 
             if (currSample == null || prevSample == null) { return; }
+            if (currSample["time"] == null || prevSample["time"] == null) { return; }
+            if (currSample["elapsedDist"] == null || prevSample["elapsedDist"] == null) { return; }
+            if (currSample["altitude"] == null || prevSample["altitude"] == null) { return; }
 
             var dt = currSample["time"] - prevSample["time"];
             var dd = currSample["elapsedDist"] - prevSample["elapsedDist"];
@@ -328,20 +315,22 @@ class HikeETAView extends WatchUi.DataField
         var bufLen = _timeSamples.size();
         var newestIdx = (_oldestSampleIdx + _timeCount - 1) % bufLen;
         var newest = _timeSamples[newestIdx];
+        if (newest == null || newest["time"] == null || newest["elapsedDist"] == null) { return -1.0; }
         var newestTime = newest["time"];
         var cutoff = newestTime - windowSec;
         var oldestTime = 0.0;
-        var oldestSample = {};
+        var oldestSample = null;
         for (var i = 0; i < _timeCount; i += 1) {
             var idx = (_oldestSampleIdx + i) % bufLen;
             var sample = _timeSamples[idx];
+            if (sample == null || sample["time"] == null) { continue; }
             if (sample["time"] >= cutoff) {
                 oldestSample = sample;
                 oldestTime = sample["time"];
                 break;
             }
         }
-        if (oldestSample == null) { return -1.0; }
+        if (oldestSample == null || oldestSample["elapsedDist"] == null) { return -1.0; }
         var dt = newestTime - oldestTime;
         if (dt <= 0) { return 0.0; }
         var dd = newest["elapsedDist"] - oldestSample["elapsedDist"];
@@ -356,13 +345,15 @@ class HikeETAView extends WatchUi.DataField
         var bufLen = _timeSamples.size();
         var newestIdx = (_oldestSampleIdx + _timeCount - 1) % bufLen;
         var newest = _timeSamples[newestIdx];
+        if (newest == null || newest["time"] == null || newest["elapsedDist"] == null || newest["altitude"] == null) { return null; }
         var newestTime = newest["time"];
         var cutoff = newestTime - windowSec;
         var oldestTime = 0.0;
-        var oldestSample = {};
+        var oldestSample = null;
         for (var i = 0; i < _timeCount; i += 1) {
             var idx = (_oldestSampleIdx + i) % bufLen;
             var sample = _timeSamples[idx];
+            if (sample == null || sample["time"] == null || sample["elapsedDist"] == null || sample["altitude"] == null) { continue; }
             if (sample["time"] >= cutoff) {
                 oldestSample = sample;
                 oldestTime = sample["time"];
@@ -373,7 +364,6 @@ class HikeETAView extends WatchUi.DataField
         var dt = newestTime - oldestTime;
         if (dt <= 0) { return null; }
         var dd = newest["elapsedDist"] - oldestSample["elapsedDist"];
-
         var de = newest["altitude"] - oldestSample["altitude"];
 
         return { "delta_distance" => dd, "delta_time" => new Time.Duration(dt as Number), "delta_altitude" => de, "speed" => (dd / dt) as Float };
@@ -425,8 +415,7 @@ class HikeETAView extends WatchUi.DataField
         return Time.now().add(ete);
     }
 
-    function onUpdate(dc as Dc) as Void 
-    {
+    function onUpdate(dc as Dc) as Void {
         drawDefaultView(dc);
 
         // TODO: Determine if this label is visible for view first
